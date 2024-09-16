@@ -71,32 +71,34 @@ def empAdd():
         'Salary': empSalary,
         'Grade': empGr
     }
+    duplicateFound = False
     for emp in empDB:
         if (emp['Employee Name']== empName and
              emp['Department']== empDept and
             emp['Salary']== empSalary and
             emp['Grade']== empGr):
             userConfirmation = input('Duplicate data. An employee with the exact same data already exist. Are you sure you want to add this employee? (Y/N):    ')
+            duplicateFound = True
             if userConfirmation.upper() == 'Y':
                 empDB.append(newEmp) 
                 print('New employee successfully added.')
                 showEmpDB()
             elif userConfirmation.upper() == 'N':
                 print('Employee Addition cancelled.')
-                break
             else:
                 print('Employee addition cancelled. Please confirm the data addition with \'Y\'.')
-                return
-    userConfirmation = input('Do you want to save this employee as a new employee? (Y/N):   ')
-    if userConfirmation.upper() == 'Y':
-        empDB.append(newEmp) 
-        print('New employee data successfully added.')
-        showEmpDB()
-    elif userConfirmation.upper() == 'N':
-        print('Employee Addition cancelled.')
-        
-    else:
-        print('Employee addition cancelled. Please confirm the data addition with \'Y\'.')
+                
+    if not duplicateFound:     
+        userConfirmation = input('Do you want to save this employee as a new employee? (Y/N):   ')
+        if userConfirmation.upper() == 'Y':
+            empDB.append(newEmp) 
+            print('New employee data successfully added.')
+            showEmpDB()
+        elif userConfirmation.upper() == 'N':
+            print('Employee Addition cancelled.')
+            
+        else:
+            print('Employee addition cancelled. Please confirm the data addition with \'Y\'.')
 
 # Update Function #OK
 
