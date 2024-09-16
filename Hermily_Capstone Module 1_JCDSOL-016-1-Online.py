@@ -101,7 +101,7 @@ def empAdd():
 # Update Function #OK
 
 def updateEmp():
-    empid_toupdate = input('Enter the employee ID of the dta you want to update:    ') 
+    empid_toupdate = input('Enter the employee ID of the data you want to update:    ') 
     global empDB
     employee_found = False
     for emp in empDB:
