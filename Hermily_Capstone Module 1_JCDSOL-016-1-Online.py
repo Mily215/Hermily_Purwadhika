@@ -201,5 +201,5 @@ while True :
         delEmp()
     elif(menuOptions == '6') :
         break
-    elif(menuOptions != '1' or '2' or '3' or '4' or '5' or '6'):
+    else:
         print('Please choose one of the menu options available')
