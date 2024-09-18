@@ -50,7 +50,7 @@ def showEmpDB():
     print('Employee Directory\n')
     print('Employee ID  \t| Employee Name\t| Department\t\t| Salary\t| Grade')
     for i in range(len(empDB)) :
-        print(f'{empDB[i]["Employee ID']}\t\t| {empDB[i]['Employee Name']}  \t| {empDB[i]['Department']}\t\t| {empDB[i]['Salary']} \t| {empDB[i]['Grade']}")
+        print(f"{empDB[i]['Employee ID']}\t\t| {empDB[i]['Employee Name']}  \t| {empDB[i]['Department']}\t\t| {empDB[i]['Salary']} \t| {empDB[i]['Grade']}")
 
 #Create Function #OK
 def empAdd(): 
